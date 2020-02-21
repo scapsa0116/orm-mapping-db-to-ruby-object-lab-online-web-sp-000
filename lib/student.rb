@@ -47,7 +47,7 @@ end
      DB[:conn].execute(sql)
    end 
    
-   def self
+   def self.first_X_students_in_grade_10
   
   def save
     sql = <<-SQL
