@@ -54,6 +54,8 @@ end
     DB[:conn].execute(sql, x)[0]
     
   end
+  
+  def self 
 
   
   def save
