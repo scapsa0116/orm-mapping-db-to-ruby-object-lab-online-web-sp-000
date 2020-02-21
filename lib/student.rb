@@ -76,7 +76,7 @@ end
     SQL
     
     DB[:conn].execute(row).collect do |row|
-    self.new_from_db(row)
+     self.new_from_db(row)
    end.first
   end 
 
