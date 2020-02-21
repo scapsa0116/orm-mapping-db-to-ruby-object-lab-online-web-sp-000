@@ -53,6 +53,7 @@ end
     SQL
     DB[:conn].execute(sql, x)
   end.first
+end 
   
   def save
     sql = <<-SQL
