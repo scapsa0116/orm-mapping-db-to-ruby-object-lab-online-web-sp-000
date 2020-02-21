@@ -60,7 +60,8 @@ end
     SELECT * FROM students WHERE grade = 10 
     SQL
     
-    
+    firts_student = DB[:conn].execute(row)[0]
+    self.new
   end 
 
   
