@@ -52,7 +52,7 @@ end
     WHERE students.grade < 12
     SQL
     DB[:conn].execute(sql).collect do |row|
-      self.new_from_db(row)
+    self.new_from_db(row)
     end
   end
    
@@ -60,7 +60,7 @@ end
     sql = <<-SQL
     SELECT * 
     FROM students 
-    WHERE students.grade = 10 
+    WHERE grade = 10 
     LIMIT ?
     SQL
     first_x_students = DB[:conn].execute(sql, x) #.map do |row|
