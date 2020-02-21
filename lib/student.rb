@@ -61,7 +61,7 @@ end
     SQL
     
     firts_student = DB[:conn].execute(row)[0]
-    self.new
+    self.new_from_db(first_student)
   end 
 
   
