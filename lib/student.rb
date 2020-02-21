@@ -71,11 +71,13 @@ end
     sql = <<-SQL
     SELECT * 
     FROM students 
-    WHERE grade = 10 
+    WHERE student.grade = 10 
+    LIMIT 1
     SQL
     
-    firts_student = DB[:conn].execute(row)[0]
-    self.new_from_db(first_student)
+    DB[:conn].execute(row).collect do |row|
+    self.new_from_db(row)
+   end.first
   end 
 
   
