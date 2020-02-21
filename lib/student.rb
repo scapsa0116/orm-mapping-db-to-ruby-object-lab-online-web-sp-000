@@ -63,7 +63,8 @@ end
     WHERE grade = 10 
     LIMIT ?
     SQL
-    DB[:conn].execute(sql, x)[0]
+    DB[:conn].execute(sql, x).map do |row|
+    self.new_from_db(row)
     
   end
   
